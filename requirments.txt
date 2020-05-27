@@ -1,0 +1,14 @@
+Step 1)Go to settlement_frontend/frontend and execute 
+npm install --save-dev @angular-devkit/build-angular
+npm audit fix
+npm i @angular-devkit/build-angular@0.803.24
+npm start
+
+check if url 0.0.0.0:4200 is coming in terminal ouput.
+
+Step 2)Got to inbound rule and add 4200 against your IP.
+Try to access url as below.
+
+<public_ip_of_Ec2>:4200
+
+

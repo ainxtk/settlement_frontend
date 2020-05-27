@@ -12,15 +12,15 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+      <li nz-submenu nzOpen nzTitle="Demo Page" nzIcon="dashboard">
         <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
+          <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+            <a routerLink="/job/create">Create Job</a>
+          </li>
+          <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+            <a routerLink="/job">Job List</a>
           </li>
           <!-- <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
             <a>Workplace</a>
           </li> -->
         </ul>
@@ -44,8 +44,8 @@
             ></i>
         </span>
       </div>
-    </nz-header>
-    <nz-content>
+    </nz-header>    
+    <nz-content>      
       <div class="inner-content">
         <router-outlet></router-outlet>
       </div>
