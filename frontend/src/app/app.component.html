@@ -1,4 +1,4 @@
-<nz-layout class="app-layout">
+<nz-layout *ngIf="isLoggedIn" class="app-layout">
   <nz-sider class="menu-sidebar"
             nzCollapsible
             nzWidth="256px"
@@ -43,6 +43,10 @@
                [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             ></i>
         </span>
+        <button style="float: right;margin-top: 14px;margin-right: 26px;" 
+        nz-button nzType="primary" [nzSize]="size" nzShape="circle" (click)="logout()">
+          <i nz-icon nzType="poweroff" nzTheme="outline"></i>
+        </button>
       </div>
     </nz-header>    
     <nz-content>      
@@ -52,3 +56,29 @@
     </nz-content>
   </nz-layout>
 </nz-layout>
+
+
+
+<nz-layout *ngIf="!isLoggedIn" class="app-layout">
+  <div class="login-layout">
+    <h1 nz-typography style="margin: 20px;">[Logo] Project Name</h1>
+    <div nz-row nzJustify="space-around" nzAlign="middle">
+      <div nz-col style="width: 300px; margin: 70px auto; ">
+  
+  
+        <nz-tabset>
+          <nz-tab nzTitle="Log In">
+            <login-form></login-form>
+          </nz-tab>
+          <nz-tab nzTitle="Sign Up">
+            <registration-form></registration-form>
+          </nz-tab>
+        </nz-tabset>
+        
+      </div>
+    </div>
+  </div>
+  
+</nz-layout>
+
+

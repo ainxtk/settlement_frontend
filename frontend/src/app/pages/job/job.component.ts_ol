@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-  
+
 import { HttpClient, HttpRequest, HttpResponse } from '@angular/common/http';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { UploadFile } from 'ng-zorro-antd/upload';
@@ -13,28 +13,24 @@ import { filter } from 'rxjs/operators';
 export class JobComponent {
   listOfData = [
     {
-      no: '1',
-      invoice: 'Credit Card',
-      date: '29/05/2020',
-      amount: 4345.89 ,
-      pr: 'Very Important'
+      key: '1',
+      name: 'John Brown',
+      age: 32,
+      address: 'New York No. 1 Lake Park'
     },
     {
-      no: '2',
-      invoice: 'Electricity Bill',
-      date: '20/06/2020',
-      amount: 5634.9,
-      pr:'Important'
+      key: '2',
+      name: 'Jim Green',
+      age: 42,
+      address: 'London No. 1 Lake Park'
     },
     {
-      no: '3',
-      invoice: 'Iphone Invoice',
-      date:'' ,
-      amount: 89000,
-      pr:'Not Important'
+      key: '3',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park'
     }
   ];
   constructor(private http: HttpClient, private msg: NzMessageService) { }
 
 }
-

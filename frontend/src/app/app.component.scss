@@ -7,6 +7,12 @@
 
 .app-layout {
   height: 100vh;
+  background-image: url('../assets/images/glob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  .ant-layout-header{
+    padding: 0 !important;
+  }
 }
 
 .menu-sidebar {
@@ -77,4 +83,11 @@ nz-content {
   padding: 24px;
   background: #fff;
   height: 100%;
+}
+
+.login-layout{
+  .ant-tabs-bar{
+    border-bottom-width: 0px;
+    text-align: center;
+  }
 }
